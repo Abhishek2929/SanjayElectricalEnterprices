@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjay Electrical Enterprises</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; }
+        header { background: linear-gradient(to right, #FCBC00, #371F76); color: white; padding: 40px; text-align: center; font-size: 24px; }
+        nav { background: #FCBC00; padding: 15px; text-align: center; }
+        nav a { margin: 0 20px; text-decoration: none; color: white; font-weight: bold; font-size: 18px; }
+        .hero { background: url('hero-image.jpg') no-repeat center center/cover; height: 400px; text-align: center; color: white; display: flex; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; }
+        .container { padding: 40px; max-width: 1200px; margin: auto; }
+        .section-title { font-size: 28px; margin-bottom: 20px; border-bottom: 3px solid #FCBC00; display: inline-block; }
+        .projects img { width: 100%; max-width: 600px; display: block; margin: 10px auto; }
+        .contact { background: #371F76; color: white; padding: 20px; text-align: center; }
+        .testimonials { background: #D2B48C; padding: 40px; text-align: center; }
+        .testimonial { font-style: italic; margin-bottom: 20px; }
+        .cta { background: #FCBC00; color: white; text-align: center; padding: 30px; font-size: 20px; }
+        .slider { position: relative; width: 100%; max-width: 600px; margin: auto; overflow: hidden; }
+        .slides { display: flex; transition: transform 0.5s ease-in-out; }
+        .slide { min-width: 100%; }
+        .slider img { width: 100%; }
+        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sanjay Electrical Enterprises</h1>
+        <p>Powering the Future of High-Rise Living</p>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#license">License</a>
+        <a href="#projects">Projects</a>
+        <a href="#clients">Clients</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="hero">Your Trusted Electrical Partner</div>
+    <div class="container">
+        <section id="about">
+            <h2 class="section-title">About Us</h2>
+            <p>We specialize in providing top-tier electrical contracting solutions for high-rise and luxury projects.
+            S.E.E a Class "A" Government-approved Licensed Electrical Engineer and Contractors was established by Mr. Sanjay Nigre. This proprietary concern was set up in 1994. A professional firm specializing in all work of electrification pertaining to civil construction contracts. The firm possesses thorough technical knowledge in electrification and interior decoration of top quality.</p>
+            <p>The firm has earned fame and reputation for undertaking & implementing major electrification contracts with a high sense of responsibility and commitment. It is known to undertake quality electrification work. The firm has highly specialized staff of proven competence and ability to execute contracts within a time-bound program, achieving outstanding results in projects requiring top-class electrical engineering expertise.</p>
+        </section>
+        <section id="license">
+            <h2 class="section-title">License & Certifications</h2>
+            <p>We are fully licensed and certified to undertake large-scale electrical projects.</p>
+        </section>
+        <section id="projects" class="projects">
+            <h2 class="section-title">Our Projects</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="ongoing-project.jpg" alt="Ongoing Project"></div>
+                    <div class="slide"><img src="completed-project.jpg" alt="Completed Project"></div>
+                </div>
+            </div>
+        </section>
+        <section id="clients">
+            <h2 class="section-title">Our Clients</h2>
+            <p>We have worked with top developers and contractors, ensuring excellence in all projects.</p>
+        </section>
+        <section id="testimonials" class="testimonials">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="testimonial">"Sanjay Electrical Enterprises provided top-notch service and professionalism!" - Client A</p>
+            <p class="testimonial">"Reliable and efficient electrical solutions for our high-rise projects." - Client B</p>
+        </section>
+        <section class="cta">
+            <p>Need a trusted electrical partner for your next project?</p>
+            <button onclick="location.href='#contact'">Get a Quote</button>
+        </section>
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <p>📍 Address: [Your Office Address]</p>
+            <p>📞 Phone: [Your Phone Number]</p>
+            <p>📧 Email: [Your Email]</p>
+            <p>Follow us on social media: [Facebook | LinkedIn | Instagram]</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Sanjay Electrical Enterprises. All rights reserved.</p>
+    </footer>
+    <script>
+        let index = 0;
+        function showSlides() {
+            let slides = document.querySelector('.slides');
+            let totalSlides = document.querySelectorAll('.slide').length;
+            index++;
+            if (index >= totalSlides) { index = 0; }
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+        setInterval(showSlides, 3000);
+    </script>
+</body>
+</html>
